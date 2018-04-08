@@ -9,13 +9,13 @@ function generate() {
     JSDOM.fromURL('https://www.w3.org/TR/dpub-aria-1.0/').then(dom => {
         grabData(dom.window.document).forEach(item => {
             const role = item.role
-            const filename = (role === 'index'? 'docindex' : role) + '.js'
+            const filename = (role === 'index'? 'docindex' : role.toLowerCase()) + '.js'
             const filepath = path.resolve(process.cwd(), 'lib', filename)
             if(fs.existsSync(filepath)) {
                 fs.writeFileSync(filepath, template(item))
             }
             index.push(`export * from './${ filename }'`)
-            console.log('Write successfully: ' + role)
+            console.log('Write successfully: ' + filename)
         })
         const indexpath = path.resolve(process.cwd(), 'lib', 'index.js')
         if(fs.existsSync(indexpath)) {

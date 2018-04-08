@@ -2,14 +2,15 @@ module.exports = function template({
     role,
     roleclass,
     superclass,
-    summary
+    summary,
+    abstract
 }) {
 return `import { ${ superclass } } from 'ariamodule'
 import { DPUB_ROLE_PREFIX } from './const'
 
 /**
  * @summary ${ summary }
- * @see https://www.w3.org/TR/dpub-aria-1.0/#doc-${ role }
+ * @see https://www.w3.org/TR/dpub-aria-1.0/#doc-${ role.toLowerCase() }
  */
 export class ${ roleclass } extends ${ superclass } {
     /**
@@ -17,7 +18,14 @@ export class ${ roleclass } extends ${ superclass } {
      */
     static get role() {
         return DPUB_ROLE_PREFIX + super.role
-    }
+    }` + (abstract? `
+    
+    /**
+     * @returns {Boolean}
+     */
+    static get abstract() {
+        return false
+    }` : '') + `
 }
 
 /**
