@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/aristov/dpubmodule#readme",
   "dependencies": {
-    "ariamodule": "^0.1.3"
+    "ariamodule": "^0.1.4"
   },
   "devDependencies": {
     "htmlmodule": "^0.5.20",
