@@ -16,7 +16,7 @@ npm install dpubmodule
 git clone git@github.com:aristov/dpubmodule.git
 cd dpubmodule
 npm install
-npm run webpack
+npm run watch
 ```
 
 ## License
