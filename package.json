@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/aristov/dpubmodule/issues"
   },
-  "homepage": "https://github.com/aristov/dpubmodule#readme"
+  "homepage": "https://github.com/aristov/dpubmodule#readme",
+  "dependencies": {
+    "ariamodule": "^0.1.3"
+  }
 }
