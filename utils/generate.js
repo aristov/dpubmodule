@@ -9,7 +9,7 @@ function generate() {
     JSDOM.fromURL('https://www.w3.org/TR/dpub-aria-1.0/').then(dom => {
         grabData(dom.window.document).forEach(item => {
             const role = item.role
-            const filename = (role === 'index'? 'docindex' : role.toLowerCase()) + '.js'
+            const filename = (role === 'index'? 'doc-index' : role.toLowerCase()) + '.js'
             const filepath = path.resolve(process.cwd(), 'lib', filename)
             if(fs.existsSync(filepath)) {
                 fs.writeFileSync(filepath, template(item))
