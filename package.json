@@ -1,6 +1,6 @@
 {
   "name": "dpubmodule",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "DPub WAI-ARIA DOM assembler library",
   "main": "lib/index.js",
   "scripts": {
