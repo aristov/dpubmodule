@@ -27,12 +27,12 @@
   },
   "homepage": "https://github.com/aristov/dpubmodule#readme",
   "dependencies": {
-    "ariamodule": "^0.1.4"
+    "ariamodule": "github:aristov/ariamodule"
   },
   "devDependencies": {
     "htmlmodule": "^0.5.20",
     "jsdom": "^11.7.0",
     "webpack": "^4.5.0",
-    "webpack-cli": "^2.0.14"
+    "webpack-cli": "^3.1.0"
   }
 }
